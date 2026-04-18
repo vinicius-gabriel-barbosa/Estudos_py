@@ -1,3 +1,0 @@
-##teste
-
-print("hello word")
