@@ -2,9 +2,13 @@
 
 def obter_dados_usuarios():
     """Essa def coleta os dados da pessoa que vai usar como peso e altura para calcular o imc"""
-    peso = float(input("Qual o seu peso: "))
-    altura = float(input("Qual a sua altura, em metros: "))
-    return peso, altura #aqui vamos retornar o peso e a altura para fora da def
+    while True:
+        try:
+            peso = float(input("Qual o seu peso: "))
+            altura = float(input("Qual a sua altura, em metros: "))
+            return peso, altura #aqui vamos retornar o peso e a altura para fora da def
+        except ValueError:
+            print("tente colocar um numero")
 
 def main():
     """vamos pegar o peso e a altura do obter_dados_usuarios e vamos calcular o imc"""
